@@ -17,7 +17,7 @@ export default function HeroBanner() {
         />
         {/* Overlay כללי עדין */}
         <div className="absolute inset-0 bg-green-900/20" />
-        {/* Overlay צדדי כהה */}
+        {/* Overlay צדדי כהה (מגביה ניגודיות באזור הטקסט) */}
         <div className="absolute inset-y-0 right-0 w-full md:w-2/3 bg-gradient-to-l from-green-950/55 via-green-900/35 to-transparent" />
       </div>
 
@@ -31,25 +31,25 @@ export default function HeroBanner() {
       >
         <div className="sectionHero w-full px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-[1fr_auto] items-center gap-6">
-            {/* קופסה חצי שקופה קטנה יותר */}
-            <div className="inline-block max-w-md rounded-2xl bg-white/40 backdrop-blur-[3px] ring-1 ring-white/25 p-3 md:p-5 text-center md:text-right">
-              <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-white drop-shadow-md">
+            {/* קופסת טקסט חצי שקופה לשיפור קריאות */}
+            <div className="rounded-2xl bg-white/40 backdrop-blur-[3px] ring-1 ring-white/25 p-4 md:p-6">
+              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-white drop-shadow-md">
                 טיפול CBT
               </h1>
-              <p className="mt-1 text-sm md:text-base text-black/95 drop-shadow-md leading-snug">
+              <p className="mt-2 text-black/95 md:text-lg drop-shadow-md">
                 טיפול ממוקד וקצר מועד להתמודדות עם חרדה, דיכאון, OCD וסטרס — בקצב שלך
                 ובאווירה מכילה.
               </p>
-              <div className="mt-4 flex flex-col sm:flex-row gap-2 justify-center md:justify-start">
+              <div className="mt-5 flex gap-3">
                 <a
                   href="#contact"
-                  className="px-4 py-2 rounded-full bg-green-dark text-white text-sm hover:opacity-90 transition"
+                  className="px-5 py-2.5 rounded-full bg-green-dark text-white hover:opacity-90 transition"
                 >
                   קבעו פגישה
                 </a>
                 <a
                   href="#services"
-                  className="px-4 py-2 rounded-full border border-white/80 text-white text-sm hover:bg-white/10 transition"
+                  className="px-5 py-2.5 rounded-full border border-white/80 text-white hover:bg-white/10 transition"
                 >
                   למה CBT?
                 </a>
