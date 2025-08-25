@@ -7,7 +7,7 @@ const items = [
   { icon: AlertTriangle, title: "חרדות", href: "/services/anxiety" },
   { icon: RefreshCcw, title: "OCD", href: "/services/ocd" },
   { icon: Sparkles, title: "דימוי עצמי", href: "/services/self-esteem" },
-  { icon: Brain, title: "התמודדות עם סטרס", href: "/services/stress" },
+  { icon: Brain, title: "התמודדות עם לחץ", href: "/services/stress" },
 ];
 
 function Card({
@@ -26,13 +26,13 @@ function Card({
       </div>
       <div className="font-semibold text-charcoal">{title}</div>
 
-      <Link
+      {/* <Link
         href={href}
         className="mt-4 inline-flex items-center justify-center rounded-xl border border-green-dark/20 px-4 py-2 text-sm font-medium text-green-dark transition hover:bg-green-dark hover:text-white"
         aria-label={`מידע נוסף על ${title}`}
       >
         מידע נוסף
-      </Link>
+      </Link> */}
     </div>
   );
 }
