@@ -53,23 +53,28 @@ export default function Navbar() {
         scrolled ? "bg-white/90 shadow-sm" : "bg-white/40"
       } h-[9vh] md:h-[10vh] min-h-12 relative`}
     >
-      {/* nav תופס את כל הגובה, בלי padding אנכי */}
-      <nav className="navbar-container h-full flex items-center justify-between py-0">
-        {/* לוגו – נשאר גדול, ממלא את הגובה של ה־navbar */}
-        <div className="h-full flex items-center shrink-0">
-          <Image
-            src="/Logo_CBT.png"
-            alt="CBT Logo"
-            width={90}
-            height={50}
-            //className="h-full w-auto select-none"
-            priority
-          />
-          <div className="flex flex-col justify-center leading-tight">
-          <span className="text-[15px] md:text-base font-semibold text-green-dark">
-            שרון נאור · מטפלת CBT
-          </span>
-        </div>
+        {/* nav תופס את כל הגובה, בלי padding אנכי */}
+        <nav className="navbar-container h-full flex items-center justify-between py-0">
+          {/* לוגו – נשאר גדול, ממלא את הגובה של ה־navbar */}
+          <div className="h-full flex items-center shrink-0">
+            <a
+              href="#hero"
+              onClick={handleClick("#hero")}
+              className="h-full flex items-center cursor-pointer select-none"
+            >
+              <Image
+                src="/Logo_CBT.png"
+                alt="CBT Logo"
+                width={90}
+                height={50}
+                priority
+              />
+              <div className="flex flex-col justify-center leading-tight ml-2">
+                <span className="text-[15px] md:text-base font-semibold text-green-dark">
+                  שרון נאור · מטפלת CBT
+                </span>
+              </div>
+            </a>
         </div>
 
         {/* קישורים לדסקטופ – ללא תרומה לגובה (leading-none) */}

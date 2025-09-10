@@ -1,11 +1,13 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function About() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section id="about" className="section" dir="rtl">
       <div className="grid md:grid-cols-2 gap-10 items-center">
-        
         {/* טקסט */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -23,12 +25,11 @@ export default function About() {
 
           <p className="mt-4 leading-7 md:leading-8 text-charcoal/80 max-w-2xl mx-auto md:mx-0">
             אני מטפלת קוגניטיבית-התנהגותית (CBT), בעלת ניסיון בעבודה עם
-            מתבגרים ומבוגרים בתחומי חרדה, דיכאון, OCD וניהול סטרס. הגישה שלי
-            משלבת כלים מעשיים, חמלה ומותאמת אישית לכל אדם.
+            מתבגרים ומבוגרים בתחומי חרדה, דיכאון, OCD וניהול סטרס.
           </p>
           <p className="mt-2 text-charcoal/80 max-w-2xl mx-auto md:mx-0">
             המטרה שלי היא לסייע לך לפתח הרגלים חדשים, לשנות דפוסי חשיבה ולייצר
-            תוצאות אמיתיות ביומיום.
+            תוצאות אמיתיות ביום יום.
           </p>
 
           {/* כפתורים */}
@@ -39,12 +40,12 @@ export default function About() {
             >
               ליצירת קשר
             </a>
-            <a
-              href="#contact"
+            <button
+              onClick={() => setIsOpen(true)}
               className="btn btn-outline px-5 py-2 text-sm rounded-full w-[70%] sm:w-auto mx-auto md:mx-0"
             >
-              למידע נוסף
-            </a>
+               להיכרות מעמיקה
+            </button>
           </div>
         </motion.div>
 
@@ -65,6 +66,50 @@ export default function About() {
           </div>
         </motion.div>
       </div>
+
+      {/* מודל */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-lg max-w-3xl w-full p-6 overflow-y-auto max-h-[80vh]">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold text-green-dark"> מידע נוסף עליי </h2>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl"
+              >
+                ×
+              </button>
+            </div>
+            <div className="space-y-4 text-charcoal/80 leading-7 text-sm md:text-base">
+              <p>
+                אני שרון, אמא לשלושה בנים - שני בוגרים ומתבגר ובת הזוג של עמית.
+                אני יועצת חינוכית ומטפלת קוגניטיבית התנהגותית (CBT), העוסקת
+                בתחומי חינוך, ייעוץ, אימון, טיפול, הנחייה והדרכה מעל ל-25 שנה
+                במגוון תפקידים.
+              </p>
+              <p>
+                אני בעלת תואר שני (M.A) בייעוץ חינוכי ורישיון ייעוץ קבוע, תעודה בפסיכותרפיה קוגניטיבית התנהגותית (CBT) 
+                , תואר שני נוסף בקרימינולוגיה (A.M), תעודה באימון אישי והכשרת מאמנים, תואר ראשון (B.A)  בחינוך ולשון, תעודת הוראה בלשון ותעודה בניהול משאבי אנוש והדרכה. בנוסף במהלך כל השנים אני ממשיכה ללמוד ולהתפתח,
+                 דרך קורסים,
+                 השתלמויות והכשרות מתוך אמונה שהלמידה חשובה לצמיחה ולהתפתחות המקצועית והאישית ולא נעצרת אף פעם.
+              </p>
+              <p>
+                דרכי המקצועית עוברת דרך תפקידים מגוונים ומשמעותיים כגון הוראה וחינוך כולל נוער בסיכון וחינוך מיוחד, מנהלת השכלה של תוכנית היל"ה ביחידה לקידום נוער במודיעין,
+                 מנחת השכלה בתוכנית היל"ה מחוז ירושלים, מובילת פורום יועצות על יסודי במודיעין, מנחת השתלמות בתוכנית "בוחרים בחיים" 
+                 של משרד החינוך העוסקת בחיזוק החוסן ובהעברת ידע מציל חיים בנושא דיכאון ומניעת אובדנות, מנחת סופרוויז'ן
+                 ליועצות בתחילת דרכן, רכזת יועצות וחברת צוות הניהול המצומצם של בית הספר.
+              </p>
+              <p>
+                במהלך השנים זכיתי להוביל וללוות תלמידים, הורים וצוותי חינוך וייעוץ ,
+                 באופן אישי ובקבוצות. אני רואה בעבודתי שליחות ואתגר, ואוהבת לעבוד עם אנשים ממגוון רחב של אוכלוסיות.
+                 בכל מפגש אני רואה את האדם מולי ומשתדלת להביא מניסיוני תוך שילוב של מקצועיות,
+                 רגישות, הקשבה אמפתית ואמונה גדולה בכוחו של כל אדם לצמוח, לשנות ולמצוא את הדרך הנכונה עבורו.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

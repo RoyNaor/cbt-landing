@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroBanner() {
   return (
-    <section className="relative overflow-hidden">
+    <section id="hero" className="relative overflow-hidden">
       {/* תמונת רקע – באנר נמוך */}
       <div className="relative h-[220px] md:h-[300px]">
         <Image
@@ -37,7 +37,7 @@ export default function HeroBanner() {
                 טיפול CBT
               </h1>
               <p className="mt-2 text-black/95 md:text-lg drop-shadow-md">
-                טיפול ממוקד וקצר מועד להתמודדות עם חרדה, דיכאון, OCD וסטרס — בקצב שלך
+                טיפול ממוקד וקצר המיועד להתמודדות עם חרדה, חרדת בחינות, OCD וסטרס — בקצב שלך
                 ובאווירה מכילה.
               </p>
               <div className="mt-5 flex gap-3">

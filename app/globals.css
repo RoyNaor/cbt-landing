@@ -1,6 +1,7 @@
 /* === Tailwind v4 core === */
 @import "tailwindcss";
 
+
 /* === Theme custom colors === */
 @theme {
   --color-pistachio: #A8D5BA;
@@ -31,7 +32,6 @@ body {
 .sectionHero {
   @apply container mx-auto max-w-6xl py-8 md:py-2 scroll-mt-2;
 }
-
 
 .btn {
   @apply inline-flex items-center justify-center rounded-2xl px-6 py-3 font-medium transition;

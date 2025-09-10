@@ -25,14 +25,6 @@ function Card({
         <Icon size={22} />
       </div>
       <div className="font-semibold text-charcoal">{title}</div>
-
-      {/* <Link
-        href={href}
-        className="mt-4 inline-flex items-center justify-center rounded-xl border border-green-dark/20 px-4 py-2 text-sm font-medium text-green-dark transition hover:bg-green-dark hover:text-white"
-        aria-label={`מידע נוסף על ${title}`}
-      >
-        מידע נוסף
-      </Link> */}
     </div>
   );
 }
@@ -41,7 +33,7 @@ export default function Services() {
   return (
     <section id="services" dir="rtl" className="section bg-gray-light rounded-[2.5rem]">
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-dark"> תחומי התמחות </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-green-dark"> תחומי הטיפול </h2>
         <p className="mt-3 text-charcoal/80">הטיפול מותאם אישית עם כלים קצרים, ברורים ויישומיים.</p>
       </div>
 
