@@ -6,9 +6,9 @@ import "swiper/css/pagination";
 
 
 export const metadata: Metadata = {
-  title: "טיפול CBT | מטפלת קוגניטיבית-התנהגותית",
+  title: "שרון נאור - מטפלת CBT",
   description:
-    "דף נחיתה בעברית (RTL) למטפלת CBT – עיצוב ירוק-פיסטוק, אנימציות עדינות ותוכן ממוקד.",
+    "להבין את המחשבות, ללמוד מהחוויות ולגלות דרכים חדשות - צעד אחר צעד, לחיים של צמיחה ואיזון.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
