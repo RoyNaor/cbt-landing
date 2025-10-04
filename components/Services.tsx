@@ -1,14 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
-import { AlertTriangle, RefreshCcw, Sparkles, Brain } from "lucide-react";
+import { BookOpenCheck, Users, Sparkles, Brain } from "lucide-react";
+
 import Link from "next/link";
 
 const items = [
-  { icon: AlertTriangle, title: "חרדות", href: "/services/anxiety" },
-  { icon: RefreshCcw, title: "OCD", href: "/services/ocd" },
-  { icon: Sparkles, title: "דימוי עצמי", href: "/services/self-esteem" },
-  { icon: Brain, title: "התמודדות עם לחץ", href: "/services/stress" },
+  { icon: BookOpenCheck, title: "חרדת בחינות", href: "/services/anxiety" }, // ספר/מבחן
+  { icon: Users, title: "קשיים חברתיים", href: "/services/ocd" },           // אנשים = חברתי
+  { icon: Sparkles, title: "דימוי עצמי", href: "/services/self-esteem" },   // ניצוצות = ביטחון
+  { icon: Brain, title: "התמודדות עם לחץ", href: "/services/stress" },      // מוח = לחץ/חשיבה
 ];
+
 
 function Card({
   Icon,
@@ -34,7 +36,7 @@ export default function Services() {
     <section id="services" dir="rtl" className="section bg-gray-light rounded-[2.5rem]">
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-green-dark"> תחומי הטיפול </h2>
-        <p className="mt-3 text-charcoal/80">הטיפול מותאם אישית עם כלים קצרים, ברורים ויישומיים.</p>
+        <p className="mt-3 text-charcoal/80">הטיפול קצר מועד, מותאם אישית ומעניק  כלים מעשיים לחיזוק המסוגלות, לצמיחה ולשינוי.</p>
       </div>
 
       {/* מובייל – גריד רגיל */}

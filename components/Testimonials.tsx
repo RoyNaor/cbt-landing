@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
   { text: `בזכות הטיפול למדתי כלים שממש עובדים ביומיום. ממליצה בחום!` },
@@ -48,50 +47,39 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="scroll-mt-24 py-16 px-4 justify-center items-center" >
+    <section id="testimonials" className="scroll-mt-24 py-16 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto rounded-[32px] border border-pistachio bg-white shadow-sm px-6 md:px-10 py-12"
+        className="max-w-6xl mx-auto"
       >
         {/* כותרת */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-green-dark">
-             המלצות
+            המלצות
           </h2>
         </div>
 
-        {/* קרוסלה בלי חצים */}
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          loop={true}
-          className="flex justify-center"
-        >
+        {/* גריד כרטיסיות */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
-            <SwiperSlide
+            <motion.div
               key={i}
-              className="flex justify-center items-center min-h-[300px] md:min-h-[400px]"
+              className="rounded-2xl bg-white border border-pistachio/50 shadow-sm p-6 flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
             >
-              <motion.blockquote
-                className="w-full max-w-2xl rounded-2xl bg-white p-6 md:p-8 text-right shadow-sm border border-pistachio/60"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-              >
-                <p className="text-charcoal/90 text-base md:text-lg leading-relaxed whitespace-pre-line">
-                  “{t.text}”
-                </p>
-              </motion.blockquote>
-            </SwiperSlide>
+              <FaQuoteLeft className="text-green-dark text-4xl mb-4" />
+              <p className="text-charcoal/90 text-base leading-relaxed whitespace-pre-line">
+                {t.text}
+              </p>
+            </motion.div>
           ))}
-        </Swiper>
+        </div>
       </motion.div>
     </section>
   );

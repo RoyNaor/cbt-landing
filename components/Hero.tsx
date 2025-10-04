@@ -8,7 +8,7 @@ export default function HeroBanner() {
       {/* תמונת רקע – באנר נמוך */}
       <div className="relative h-[220px] md:h-[300px]">
         <Image
-          src="https://images.unsplash.com/uploads/1412026095116d2b0c90e/3bf33993?q=80&w=2934&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/banner_cbt.jpg"
           alt="גלי ים שקטים"
           fill
           priority
@@ -33,12 +33,11 @@ export default function HeroBanner() {
           <div className="max-w-4xl mx-auto grid md:grid-cols-[1fr_auto] items-center gap-6">
             {/* קופסת טקסט חצי שקופה לשיפור קריאות */}
             <div className="rounded-2xl bg-white/40 backdrop-blur-[3px] ring-1 ring-white/25 p-4 md:p-6">
-              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-white drop-shadow-md">
-                טיפול CBT
+              <h1 className="text-xl md:text-4xl font-semibold tracking-tight text-white drop-shadow-md">
+                בין מחשבה למציאות  טמון החופש לשנות.
               </h1>
               <p className="mt-2 text-black/95 md:text-lg drop-shadow-md">
-                טיפול ממוקד וקצר המיועד להתמודדות עם חרדה, חרדת בחינות, OCD וסטרס — בקצב שלך
-                ובאווירה מכילה.
+                להבין את המחשבות, ללמוד מהחוויות ולגלות דרכים חדשות - צעד אחר צעד, לחיים של צמיחה ואיזון.
               </p>
               <div className="mt-5 flex gap-3">
                 <a
