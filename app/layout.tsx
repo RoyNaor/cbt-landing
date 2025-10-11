@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "שרון נאור - מטפלת CBT",
   description:
     "להבין את המחשבות, ללמוד מהחוויות ולגלות דרכים חדשות - צעד אחר צעד, לחיים של צמיחה ואיזון.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

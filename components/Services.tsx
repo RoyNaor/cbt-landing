@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const items = [
   { icon: BookOpenCheck, title: "חרדת בחינות", href: "/services/anxiety" }, // ספר/מבחן
-  { icon: Users, title: "קשיים חברתיים", href: "/services/ocd" },           // אנשים = חברתי
+  { icon: Users, title: "קושי חברתי", href: "/services/ocd" },           // אנשים = חברתי
   { icon: Sparkles, title: "דימוי עצמי", href: "/services/self-esteem" },   // ניצוצות = ביטחון
   { icon: Brain, title: "התמודדות עם לחץ", href: "/services/stress" },      // מוח = לחץ/חשיבה
 ];
@@ -26,7 +26,10 @@ function Card({
       <div className="mx-auto mb-3 grid h-12 w-12 place-items-center rounded-2xl bg-pistachio text-green-dark">
         <Icon size={22} />
       </div>
-      <div className="font-semibold text-charcoal">{title}</div>
+      <div className="font-bold text-charcoal text-sm sm:text-base leading-tight whitespace-nowrap">
+      {title}
+    </div>
+
     </div>
   );
 }
@@ -40,7 +43,7 @@ export default function Services() {
       </div>
 
       {/* מובייל – גריד רגיל */}
-      <div className="md:hidden mx-auto max-w-4xl grid grid-cols-2 gap-4">
+      <div className="md:hidden mx-auto max-w-4xl grid grid-cols-2 gap-4 px-4 sm:px-6">
         {items.map(({ icon: Icon, title, href }, i) => (
           <motion.div
             key={title}
@@ -53,6 +56,7 @@ export default function Services() {
           </motion.div>
         ))}
       </div>
+
 
       {/* דסקטופ – Overlapping / Stack */}
       <div className="hidden md:flex justify-center">

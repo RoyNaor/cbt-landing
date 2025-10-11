@@ -22,7 +22,7 @@ export default function Footer() {
 
     if (res.ok) {
       setStatus("success");
-      form.reset(); // עכשיו זה עובד
+      form.reset(); 
     } else {
       setStatus("error");
     }
@@ -45,7 +45,7 @@ export default function Footer() {
             <div>
               <h3 className="text-2xl md:text-3xl font-bold">בואו נדבר</h3>
               <p className="mt-2 text-white/80">
-                השאירו פרטים ואחזור אליכם לתיאום שיחה ראשונית ללא עלות.
+                השאירו פרטים ואחזור אליכם/ן בהקדם.
               </p>
 
               <form
@@ -83,7 +83,7 @@ export default function Footer() {
                 <textarea
                   name="message"
                   rows={4}
-                  placeholder="כמה מילים על מה תרצו לעבוד"
+                  placeholder="בכמה מילים, על מה תרצו לעבוד?"
                   className="w-full rounded-xl bg-white text-charcoal placeholder-charcoal/50
                              px-4 py-3 ring-1 ring-black/10 shadow-sm resize-y
                              focus:outline-none focus:ring-2 focus:ring-emerald-500"
@@ -138,9 +138,9 @@ export default function Footer() {
                     <Mail className="size-5 shrink-0 text-white/80" />
                     <a
                       className="underline-offset-4 hover:underline break-all"
-                      href="mailto:sharonnaor10@gmail.com"
+                      href="mailto:sharonnaor.tipul@gmail.com"
                     >
-                      sharonnaor10@gmail.com
+                      sharonnaor.tipul@gmail.com
                     </a>
                   </li>
                   <li className="flex items-center gap-3">
